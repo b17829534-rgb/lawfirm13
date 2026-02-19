@@ -1634,7 +1634,17 @@ p {
             color: #999;
             font-size: 0.85rem;
         }
-
+ @media (max-width: 968px) {
+    .blog-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 2rem;
+            }
+          }
+  @media (max-width: 480px) {
+           .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 /* why choose us */
 .why-section {
   padding: 100px 20px;
@@ -3423,4 +3433,5 @@ p {
       .services-grid { grid-template-columns: 1fr; }
       .container { padding: 0 24px; }
       .strip-inner { padding: 0 24px; flex-direction: column; gap: 20px; }
+
     }
