@@ -912,6 +912,83 @@ p {
   transition: transform 0.3s ease;
   display: block;
 }
+@media (max-width: 1024px) {
+
+  .story-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .story-image {
+    left: 0;
+    text-align: center;
+  }
+
+  .story-image img {
+    height: 450px;
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+  }
+}
+
+
+/* ============================= */
+/* 📱 Mobile Responsive (768px and below) */
+/* ============================= */
+@media (max-width: 768px) {
+
+  .story-section {
+    padding: 40px 15px 60px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .story-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .story-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: left; /* better for mobile */
+  }
+
+  .story-image {
+    left: 0;
+  }
+
+  .story-image img {
+    height: auto;
+    width: 100%;
+    max-height: 400px;
+  }
+}
+
+
+/* ============================= */
+/* 📱 Small Mobile (480px and below) */
+/* ============================= */
+@media (max-width: 480px) {
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .story-text p {
+    font-size: 0.95rem;
+  }
+
+  .story-image img {
+    max-height: 320px;
+  }
+}
 
 /* .story-image::before {
   content: '';
@@ -1346,7 +1423,7 @@ p {
 @media (max-width: 768px) {
 
   .practice {
-     padding: 220px 16px 70px;  
+     padding: 40px 16px 70px;  
   }
 
   .header {
@@ -1660,7 +1737,7 @@ p {
 /* Blog Grid */
         .blog-section{
              background: var(--cream);
-             padding: 50px 5%; 
+             padding: 40px 5%; 
          } 
         .section-title {
             text-align: center;
@@ -1796,6 +1873,12 @@ p {
             color: #999;
             font-size: 0.85rem;
         }
+        @media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
  @media (max-width: 968px) {
     .blog-grid {
                 grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
